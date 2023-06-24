@@ -35,6 +35,8 @@ class PayLoads{
                 BitBlt(desk, rand() % 155, rand() % 255, m, p, desk, rand() % 255, rand() % 155, SRCINVERT);
                 PatBlt(desk, rand() % 255, rand() % 155, m, p, PATINVERT);
             }
+            return 0;
+        }
             DWORD WINAPI PL2(LPVOID har){
                 HDC desk = GetDC(0);
                 HBITMAP h = CreateCompatibleBitmap(desk, rand() % 255, rand() % 155);
@@ -46,6 +48,7 @@ class PayLoads{
                     BitBlt(desk, rand() % 2, rand() % 2, m, p, d, rand() % 2, rand() % 2, SRCCOPY);
                     PatBlt(desk, rand() % 155, rand() % 255, m, p, PATINVERT);
                 }
+                return 0;
             }
             DWORD WINAPI PL3(LPVOID har){
                 HDC desk = GetDC(0);
@@ -55,6 +58,7 @@ class PayLoads{
                     StretchBlt(desk, rand() % 155, rand() % 255, m - 1. p -1, desk, rand() % 255, rand() % 155, m, p, SRCCOPY);
                     PatBlt(desk, rand() % 255, rand() % 155, m, p, PATINVERT);
                 }
+                return 0;
             }
             DWORD WINAPI PL4(LPVOID har){
                 HDC desk = GetDC(0);
@@ -65,6 +69,7 @@ class PayLoads{
                     PatBlt(desk, rand() % 155, rand() % 255, m, p, PATINVERT);
                     BitBlt(desk, rand() % 255, rand() % 155, m, p, desk, rand() % 255, rand() % 155, SRCAND);
                 }
+                return 0;
             }
             DWORD WINAPI PL5(LPVOID har){
                     HDC desk = GetDC(0);
@@ -79,6 +84,7 @@ class PayLoads{
                         TextOutW(desk, rand() % m, rand() % p, text, wcslen(text));
                         PatBlt(desk, rand() % 255, rand() % 155, m, p, PATINVERT);
                     }
+                return 0;
             }
 };
 
